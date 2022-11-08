@@ -28,6 +28,7 @@ internal class DBClient
         {
             command.ExecuteNonQuery();
         }
+        connection.Close();
     }
 }
 
