@@ -2,7 +2,7 @@
 
 menuPicker();
 
-void menuPicker()
+static void menuPicker()
 {
     bool Continue = true;
     Facility facilityCreator = new();
@@ -35,7 +35,7 @@ void menuPicker()
                 Continue = false;
                 break;
             default:
-                Console.WriteLine("Invalid number enter try again");
+                Console.WriteLine("Invalid number entered, try again");
                 Console.ReadKey();
                 break;
         }
