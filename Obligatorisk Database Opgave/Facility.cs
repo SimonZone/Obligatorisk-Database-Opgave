@@ -6,14 +6,14 @@ using System.Threading.Tasks;
 
 internal class Facility
 {
-    DBClient dBClient = new();
+    readonly DBClient dBClient = new();
 
     public void CreateFacility()
     {
         Console.Clear();
         Console.WriteLine("Creating new facility");
         Console.WriteLine("Please enter name for the facility");
-        string facilityName = Console.ReadLine();
+        string? facilityName = Console.ReadLine();
         string queryString = $"INSERT INTO FacilityT VALUES ('{facilityName}')";
         dBClient.Start(queryString);
         Console.WriteLine($"Created Facility: {facilityName}");
@@ -40,7 +40,7 @@ internal class Facility
         Console.WriteLine("Please enter number for the facility to be updated");
         int facilityId = Convert.ToInt32(Console.ReadLine());
         Console.WriteLine("Please enter a new name for the facility");
-        string facilityName = Console.ReadLine();
+        string? facilityName = Console.ReadLine();
         string queryString = $"UPDATE FacilityT SET FacilityType = '{facilityName}' WHERE facilityId = {facilityId}";
         dBClient.Start(queryString);
         Console.WriteLine($"Updated Facility: {facilityId}, {facilityName}");
