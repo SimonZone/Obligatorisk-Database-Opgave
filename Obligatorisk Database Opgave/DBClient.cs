@@ -5,7 +5,7 @@ internal class DBClient
 {
     public void Start(string queryString)
     {
-        // The connectionString is connected to my azure database with the same data as what would be in the txt files
+        // set this to your DB you create with the script
         string connectionString = "Data Source=(localdb)\\MSSQLLocalDB;Initial Catalog=HotelDBRE;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
 
 
